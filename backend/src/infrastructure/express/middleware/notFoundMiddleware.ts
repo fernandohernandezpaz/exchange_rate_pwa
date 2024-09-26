@@ -1,7 +1,7 @@
-import {Request, Response, NextFunction} from 'express';
+import { Request, Response } from 'express';
 
-export const notFoundMiddleware = (req: Request, res: Response, next: NextFunction) => {
-    res.status(404).json({
-        message: 'Route not fou',
-    });
-}
+export const notFoundMiddleware = (_: Request, res: Response) => {
+	res.status(404).json({
+		message: 'Route not found',
+	});
+};
