@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { convertAmount, getRate } from '../../controllers/exchangeRate.controller';
+import { convertAmount, getRate } from './controllers/exchangeRate.controller';
 
 const router = Router();
 router.get('/convert_amount/', convertAmount);

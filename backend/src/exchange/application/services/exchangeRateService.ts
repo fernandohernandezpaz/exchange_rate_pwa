@@ -1,4 +1,4 @@
-import {ExchangeRatePort} from '../domain/ports/exchangeRate.port';
+import {ExchangeRatePort} from '../../domain/ports/exchangeRate.port';
 
 export class ExchangeRateService {
     private exchangeRatePort: ExchangeRatePort;
@@ -11,7 +11,7 @@ export class ExchangeRateService {
         baseCurrency: string,
         targetCurrency: string,
         amount: string,
-    ): Promise<number> {
+    ): Promise<number | null> {
         return this.exchangeRatePort.convertAmount(baseCurrency, targetCurrency, amount);
     }
 

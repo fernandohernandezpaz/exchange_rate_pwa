@@ -1,5 +1,5 @@
 
-export interface IGetExchangeRateResponse {
+export interface GetExchangeRateAPIResponseDto {
     date: string;
     success: boolean;
     timestamp: number;
