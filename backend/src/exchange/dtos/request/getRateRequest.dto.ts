@@ -1,5 +1,5 @@
 export interface GetRateRequestDto {
-    baseCurrency: string;
-    targetCurrency: string;
-    date: Date;
+	baseCurrency: string;
+	targetCurrency: string;
+	date: Date;
 }

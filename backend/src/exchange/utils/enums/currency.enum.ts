@@ -1,6 +1,6 @@
 export enum CurrencyEnum {
-    USD,
-    CAD,
-    NIO,
-    EUR,
+	USD,
+	CAD,
+	NIO,
+	EUR,
 }

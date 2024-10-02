@@ -1,6 +1,5 @@
-
 export interface GetExchangeRateResponseDto {
-    baseCurrency: string;
-    targetCurrency: string;
-    rate: number;
+	baseCurrency: string;
+	targetCurrency: string;
+	rate: number;
 }
