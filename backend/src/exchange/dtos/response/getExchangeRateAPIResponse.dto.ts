@@ -1,3 +1,4 @@
+import { Rate } from '../../utils/interfaces/iRate'
 
 export interface GetExchangeRateAPIResponseDto {
     date: string;
@@ -5,5 +6,5 @@ export interface GetExchangeRateAPIResponseDto {
     timestamp: number;
     base: string,
     historical: boolean,
-    rates: Record<string, number>,
+    rates: Rate,
 }
