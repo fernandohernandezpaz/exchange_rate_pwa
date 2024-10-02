@@ -1,14 +1,14 @@
 import { Request, Response } from 'express';
-import { ConvertAmountRequestDto } from '../../dtos/request/convertAmountRequest.dto';
-import { GetRateRequestDto } from '../../dtos/request/getRateRequest.dto';
-import { ExchangeRateService } from '../../application/services/exchangeRateService';
-import { ConvertAmountResponseDto } from '../../dtos/response/convertAmountResponse.dto';
-import { GetExchangeRateResponseDto } from '../../dtos/response/getExchangeRateResponse.dto';
+import { ConvertAmountRequestDto } from '../../dtos/request/convert-amount-request.dto';
+import { GetRateRequestDto } from '../../dtos/request/get-rate-request.dto';
+import { ExchangeRateService } from '../../application/services/exchange-rate.service';
+import { ConvertAmountResponseDto } from '../../dtos/response/convert-amount-response.dto';
+import { GetExchangeRateResponseDto } from '../../dtos/response/get-exchange-rate-response.dto';
 import { ErrorResponseDto } from '../../../shared/dtos/errorResponse.dto';
-import { ExchangeRateAPIAdapter } from '../adapters/exchangeRateAPI.adapter';
+import { ExchangeRateApiAdapter } from '../adapters/exchange-rate-api.adapter';
 import { cast } from '../../../shared/utils/cast.utils';
 
-const exchangeRateApiAdapter = new ExchangeRateAPIAdapter();
+const exchangeRateApiAdapter = new ExchangeRateApiAdapter();
 const exchangeRateService = new ExchangeRateService(exchangeRateApiAdapter);
 
 export const convertAmount = async (

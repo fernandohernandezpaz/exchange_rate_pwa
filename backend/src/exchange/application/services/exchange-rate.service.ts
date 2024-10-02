@@ -1,4 +1,4 @@
-import { ExchangeRatePort } from '../../domain/ports/exchangeRate.port';
+import { ExchangeRatePort } from '../../domain/ports/exchange-rate.port';
 
 export class ExchangeRateService {
 	private exchangeRatePort: ExchangeRatePort;

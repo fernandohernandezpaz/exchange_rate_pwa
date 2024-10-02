@@ -1,11 +1,11 @@
 import axios, { AxiosResponse, AxiosHeaders } from 'axios';
 import { config } from '../../../config/config';
-import { ExchangeRatePort } from '../../domain/ports/exchangeRate.port';
-import { ConvertAmountAPIResponseDto } from '../../dtos/response/convertAmountAPIResponse.dto';
-import { GetExchangeRateAPIResponseDto } from '../../dtos/response/getExchangeRateAPIResponse.dto';
+import { ExchangeRatePort } from '../../domain/ports/exchange-rate.port';
+import { ConvertAmountApiResponseDto } from '../../dtos/response/convert-amount-api-response.dto';
+import { GetExchangeRateApiResponseDto } from '../../dtos/response/get-exchange-rate-api-response.dto';
 import { createQueryString, joinURL } from '../../../shared/utils/string.utils';
 
-export class ExchangeRateAPIAdapter implements ExchangeRatePort {
+export class ExchangeRateApiAdapter implements ExchangeRatePort {
 	private apiKey: string = config.apiKey;
 	private apiDomain: string = config.apiDomain;
 
@@ -27,7 +27,7 @@ export class ExchangeRateAPIAdapter implements ExchangeRatePort {
 				amount,
 			});
 
-			const response: AxiosResponse<ConvertAmountAPIResponseDto> = await axios.get(
+			const response: AxiosResponse<ConvertAmountApiResponseDto> = await axios.get(
 				joinURL(this.apiDomain, `/exchangerates_data/convert?${queryParameters}`),
 				{
 					headers: this.headers(),
@@ -52,7 +52,7 @@ export class ExchangeRateAPIAdapter implements ExchangeRatePort {
 				symbols: targetCurrency,
 				base: baseCurrency,
 			});
-			const response: AxiosResponse<GetExchangeRateAPIResponseDto> = await axios.get(
+			const response: AxiosResponse<GetExchangeRateApiResponseDto> = await axios.get(
 				joinURL(this.apiDomain, `/exchangerates_data/${dateSelected}?${queryParameters}`),
 				{
 					headers: this.headers(),
