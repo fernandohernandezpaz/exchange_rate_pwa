@@ -1,7 +1,7 @@
 import express from 'express';
 import { config } from './config/config';
-import rateRoutes from './infrastructure/express/routes/rate.routes';
-import { notFoundMiddleware } from './infrastructure/express/middleware/notFoundMiddleware';
+import rateRoutes from './exchange/infrastructure/rate.routes';
+import { notFoundMiddleware } from './shared/middleware/notFoundMiddleware';
 
 const app = express();
 app.use(express.json());

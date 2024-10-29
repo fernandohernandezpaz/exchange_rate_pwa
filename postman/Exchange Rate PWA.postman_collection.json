@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "f46240c7-f5ca-4497-9b6b-35d4fb4d9479",
+		"name": "Exchange Rate PWA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23070535"
+	},
+	"item": [
+		{
+			"name": "Get rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/rate/get_rate/?baseCurrency=CAD&targetCurrency=NIO&date=2024-09-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rate",
+						"get_rate",
+						""
+					],
+					"query": [
+						{
+							"key": "baseCurrency",
+							"value": "CAD"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "NIO"
+						},
+						{
+							"key": "date",
+							"value": "2024-09-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert Amount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/rate/convert_amount/?baseCurrency=CAD&targetCurrency=USD&amount=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"rate",
+						"convert_amount",
+						""
+					],
+					"query": [
+						{
+							"key": "baseCurrency",
+							"value": "CAD"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "USD"
+						},
+						{
+							"key": "amount",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,4 @@
-export interface IInfo {
+export interface InfoInterface {
 	rate: number;
 	timestamp: number;
 }
